@@ -1,0 +1,31 @@
+README FOR BOOKSTORE SALE PROBLEM
+#################################
+
+To compile 
+	$ javac BookstoreSale.java
+
+To run with default values
+	$ java BookstoreSale
+
+To run with custom values
+	$ java BookstoreSale {initial price} {discount} {floor price} {budget}
+	ex: java BookstoreSale 50 4 25 300
+
+
+BookstoreSale.java contains the BookstoreSale class and 3 methods
+	* main
+		If command-line parameters are passed, then those values will be used instead of default
+
+		By default, this solves BookstoreSale problem with values
+			Initial book price:	50
+			Discount between books:	4
+			"Floor" book price:	25
+			Budget:			300		
+		
+	* calcMaxPurchase
+		Easy-to-read version with O(n) runtime.  Iterative solution
+
+	* fastCalcMaxPurchase
+		If "floor" pricing is invoked, then O(1) runtime [constant]
+		This is less easy to read/support, but provides significant speed saving
+
