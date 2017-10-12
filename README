@@ -14,13 +14,7 @@ To run with custom values
 
 BookstoreSale.java contains the BookstoreSale class and 3 methods
 	* main
-		If command-line parameters are passed, then those values will be used instead of default
-
-		By default, this solves BookstoreSale problem with values
-			Initial book price:	50
-			Discount between books:	4
-			"Floor" book price:	25
-			Budget:			300		
+		If invoked, will call below methods 		
 		
 	* calcMaxPurchase
 		Easy-to-read version with O(n) runtime.  Iterative solution
@@ -29,3 +23,17 @@ BookstoreSale.java contains the BookstoreSale class and 3 methods
 		If "floor" pricing is invoked, then O(1) runtime [constant]
 		This is less easy to read/support, but provides significant speed saving
 
+#############################
+Follow-up questions 
+
+How easy will it be for a colleague to review, understand and fix a bug in your code?
+* Should be very easy.  I provided plenty of comments, and included an implementation that is easier to understand -- and one that is better performance-wise (using some math)
+
+How thorough is the test coverage and how would you measure it?
+* All test cases should be covered.  Returns [0,0] if invalid test.  For current exercise, I have main method output values of two different methods as an easy compare.  Could easily extend and use Asserts if part of a bigger project.  
+
+How would your application integrate and scale with other web services of a large online bookseller?
+* As a static method, the function can be called without instantiating the class.  Using the "fast" version, we're either in constant or linear time -- which is great for large amounts of processing 
+
+Are there additional optimizations in the code or test cases that you would like to handle but did not have time to implement?
+* There's a constant O(1) way to do the whole problem, but it's very math heavy and would be a nightmare to read.  If performance were a heavy concern, we could take that approach.  Also, would have added JUnit Asserts if this was part of a larger project
